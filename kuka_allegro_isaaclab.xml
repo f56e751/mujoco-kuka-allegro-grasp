@@ -1,0 +1,158 @@
+<mujoco model="MuJoCo Model">
+  <compiler angle="radian" meshdir="assets/isaaclab_kuka_allegro/"/>
+
+  <visual>
+    <global offwidth="1600" offheight="1000"/>
+  </visual>
+
+  <asset>
+    <material name="handmat" rgba="0.15 0.15 0.16 1"/>
+    <material name="armmat" rgba="0.62 0.62 0.64 1"/>
+    <mesh name="palm_link" file="palm_link.obj"/>
+    <mesh name="index_link_0" file="index_link_0.obj"/>
+    <mesh name="index_link_1" file="index_link_1.obj"/>
+    <mesh name="index_link_2" file="index_link_2.obj"/>
+    <mesh name="index_link_3" file="index_link_3.obj"/>
+    <mesh name="middle_link_0" file="middle_link_0.obj"/>
+    <mesh name="middle_link_1" file="middle_link_1.obj"/>
+    <mesh name="middle_link_2" file="middle_link_2.obj"/>
+    <mesh name="middle_link_3" file="middle_link_3.obj"/>
+    <mesh name="ring_link_0" file="ring_link_0.obj"/>
+    <mesh name="ring_link_1" file="ring_link_1.obj"/>
+    <mesh name="ring_link_2" file="ring_link_2.obj"/>
+    <mesh name="ring_link_3" file="ring_link_3.obj"/>
+    <mesh name="thumb_link_0" file="thumb_link_0.obj"/>
+    <mesh name="thumb_link_1" file="thumb_link_1.obj"/>
+    <mesh name="thumb_link_2" file="thumb_link_2.obj"/>
+    <mesh name="thumb_link_3" file="thumb_link_3.obj"/>
+    <mesh name="allegro_mount" file="allegro_mount.obj"/>
+    <mesh name="iiwa7_link_7" file="iiwa7_link_7.obj"/>
+    <mesh name="iiwa7_link_0" file="iiwa7_link_0.obj"/>
+    <mesh name="iiwa7_link_1" file="iiwa7_link_1.obj"/>
+    <mesh name="iiwa7_link_2" file="iiwa7_link_2.obj"/>
+    <mesh name="iiwa7_link_3" file="iiwa7_link_3.obj"/>
+    <mesh name="iiwa7_link_4" file="iiwa7_link_4.obj"/>
+    <mesh name="iiwa7_link_5" file="iiwa7_link_5.obj"/>
+    <mesh name="iiwa7_link_6" file="iiwa7_link_6.obj"/>
+  </asset>
+
+  <worldbody>
+    <geom size="2 2 0.05" type="plane" rgba="0.45 0.45 0.5 1"/>
+    <camera name="demo" pos="1.45 -0.9 0.95" quat="0.763428 0.520319 0.215523 0.316222"/>
+    <light pos="0.4 0 1.8" dir="-0.371391 0 -0.928477" diffuse="0.6 0.6 0.6" specular="0.2 0.2 0.2"/>
+    <light pos="0.9 -0.7 1.2" dir="-0.593442 0.461566 -0.65938" diffuse="0.6 0.6 0.6" specular="0.2 0.2 0.2"/>
+    <light pos="-0.4 0.6 1.4" dir="0.324443 -0.486664 -0.811107" diffuse="0.6 0.6 0.6" specular="0.2 0.2 0.2"/>
+    <body name="iiwa7_link_0">
+      <geom type="mesh" contype="0" conaffinity="0" material="armmat" mesh="iiwa7_link_0"/>
+      <body name="iiwa7_link_1" pos="0 0 0.1575">
+        <joint name="iiwa7_joint_1" pos="0 0 0" axis="0 0 1" range="-0.051785 0.051785"/>
+        <geom type="mesh" contype="0" conaffinity="0" material="armmat" mesh="iiwa7_link_1"/>
+        <body name="iiwa7_link_2" pos="0 0 0.1825" quat="-3.09086e-08 -3.09086e-08 0.707107 0.707107">
+          <joint name="iiwa7_joint_2" pos="0 0 0" axis="0 0 1" range="-0.0365541 0.0365541"/>
+          <geom type="mesh" contype="0" conaffinity="0" material="armmat" mesh="iiwa7_link_2"/>
+          <body name="iiwa7_link_3" pos="0 0.184 -1.49012e-08" quat="-0.000345236 -3.09086e-08 0.707107 0.707107">
+            <joint name="iiwa7_joint_3" pos="0 0 0" axis="0 0 1" range="-0.051785 0.051785"/>
+            <geom type="mesh" contype="0" conaffinity="0" material="armmat" mesh="iiwa7_link_3"/>
+            <body name="iiwa7_link_4" pos="-0.00010545 2.574e-08 0.216" quat="0.707107 0.707107 -0.000345205 3.50128e-11">
+              <joint name="iiwa7_joint_4" pos="0 0 0" axis="0 0 1" range="-0.0365541 0.0365541"/>
+              <geom type="mesh" contype="0" conaffinity="0" material="armmat" mesh="iiwa7_link_4"/>
+              <body name="iiwa7_link_5" pos="0 0.184 -4.41636e-09" quat="-3.20149e-08 2.98023e-08 0.707107 0.707107">
+                <joint name="iiwa7_joint_5" pos="0 0 0" axis="0 0 1" range="-0.051785 0.051785"/>
+                <geom type="mesh" contype="0" conaffinity="0" material="armmat" mesh="iiwa7_link_5"/>
+                <body name="iiwa7_link_6" pos="-6.75891e-10 0.0607 0.216" quat="0.707107 0.707107 -1.10629e-09 1.10629e-09">
+                  <joint name="iiwa7_joint_6" pos="0 0 0" axis="0 0 1" range="-0.0365541 0.0365541"/>
+                  <geom type="mesh" contype="0" conaffinity="0" material="armmat" mesh="iiwa7_link_6"/>
+                  <body name="iiwa7_link_7" pos="0 0.081 0.0607" quat="-0.000436639 0.000218335 0.707107 0.707107">
+                    <joint name="iiwa7_joint_7" pos="0 0 0" axis="0 0 1" range="-0.053308 0.053308"/>
+                    <geom type="mesh" contype="0" conaffinity="0" material="armmat" mesh="iiwa7_link_7"/>
+                    <body name="allegro_mount" pos="-2.1797e-05 1.0094e-08 0.0706024" quat="1 0 0 0">
+                      <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="allegro_mount"/>
+                      <body name="palm_link" pos="-0.00826306 -0.0206224 0.0808575" quat="-0.653305 -0.270254 0.653509 -0.270337">
+                        <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="palm_link"/>
+                        <body name="index_link_0" pos="0.0514302 -0.03632 -0.0113" quat="0.0308747 0.706449 -0.0308761 0.706416">
+                          <joint name="index_joint_0" pos="0 0 0" axis="0 0 1" range="-0.00974747 0.00974747"/>
+                          <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="index_link_0"/>
+                          <body name="index_link_1" pos="0 0 0" quat="-0.499954 0.500046 0.499977 0.500023">
+                            <joint name="index_joint_1" pos="0 0 0" axis="0 0 1" range="-0.00487373 0.0301562"/>
+                            <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="index_link_1"/>
+                            <body name="index_link_2" pos="0.054 1.01126e-08 -2.04069e-08">
+                              <joint name="index_joint_2" pos="0 0 0" axis="0 0 1" range="-0.00487373 0.0301562"/>
+                              <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="index_link_2"/>
+                              <body name="index_link_3" pos="0.0384 7.83343e-09 -8.16934e-09">
+                                <joint name="index_joint_3" pos="0 0 0" axis="0 0 1" range="-0.00487373 0.0301562"/>
+                                <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="index_link_3"/>
+                                <body name="index_biotac_tip" pos="0.055 0.015 -1.2532e-08" quat="0.976297 2.11993e-09 1.37798e-08 0.216433"/>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                        <body name="middle_link_0" pos="0.0537375 0.0087771 -0.0113" quat="3.28396e-05 0.707123 -3.27237e-05 0.70709">
+                          <joint name="middle_joint_0" pos="0 0 0" axis="0 0 1" range="-0.00974747 0.00974747"/>
+                          <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="middle_link_0"/>
+                          <body name="middle_link_1" pos="0 0 0" quat="-0.499954 0.500046 0.499977 0.500023">
+                            <joint name="middle_joint_1" pos="0 0 0" axis="0 0 1" range="-0.00487373 0.0301562"/>
+                            <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="middle_link_1"/>
+                            <body name="middle_link_2" pos="0.054 9.53191e-09 -1.52511e-08">
+                              <joint name="middle_joint_2" pos="0 0 0" axis="0 0 1" range="-0.00487373 0.0301562"/>
+                              <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="middle_link_2"/>
+                              <body name="middle_link_3" pos="0.0383999 6.20408e-09 -1.04684e-08">
+                                <joint name="middle_joint_3" pos="0 0 0" axis="0 0 1" range="-0.00487373 0.0301562"/>
+                                <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="middle_link_3"/>
+                                <body name="middle_biotac_tip" pos="0.055 0.015 -8.93268e-09" quat="0.976297 -3.03671e-08 -4.39211e-08 0.216433"/>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                        <body name="ring_link_0" pos="0.0514302 0.0538749 -0.0113" quat="-0.0308092 0.706452 0.0308107 0.706419">
+                          <joint name="ring_joint_0" pos="0 0 0" axis="0 0 1" range="-0.00974747 0.00974747"/>
+                          <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="ring_link_0"/>
+                          <body name="ring_link_1" pos="0 0 0" quat="-0.499954 0.500046 0.499977 0.500023">
+                            <joint name="ring_joint_1" pos="0 0 0" axis="0 0 1" range="-0.00487373 0.0301562"/>
+                            <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="ring_link_1"/>
+                            <body name="ring_link_2" pos="0.054 2.56606e-09 -2.88685e-09">
+                              <joint name="ring_joint_2" pos="0 0 0" axis="0 0 1" range="-0.00487373 0.0301562"/>
+                              <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="ring_link_2"/>
+                              <body name="ring_link_3" pos="0.0384 3.75662e-09 -2.2303e-09">
+                                <joint name="ring_joint_3" pos="0 0 0" axis="0 0 1" range="-0.00487373 0.0301562"/>
+                                <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="ring_link_3"/>
+                                <body name="ring_biotac_tip" pos="0.055 0.015 -8.14983e-09" quat="0.976297 -1.02074e-08 -3.63056e-09 0.216433"/>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                        <body name="thumb_link_0" pos="-0.0367482 -0.0081281 -0.0295" quat="0.706435 -0.0308591 -0.706433 -0.0308263">
+                          <joint name="thumb_joint_0" pos="0 0 0" axis="0 0 1" range="0.00487373 0.0274148"/>
+                          <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="thumb_link_0"/>
+                          <body name="thumb_link_1" pos="0.005 7.12833e-10 2.00369e-09" quat="0.707123 0.70709 3.60765e-08 -1.54146e-08">
+                            <joint name="thumb_joint_1" pos="0 0 0" axis="0 0 1" range="-0.00578756 0.0201042"/>
+                            <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="thumb_link_1"/>
+                            <body name="thumb_link_2" pos="-4.4327e-09 -7.55761e-09 0.0554" quat="3.2669e-05 0.707123 -3.25716e-05 0.70709">
+                              <joint name="thumb_joint_2" pos="0 0 0" axis="0 0 1" range="-0.00487373 0.0301562"/>
+                              <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="thumb_link_2"/>
+                              <body name="thumb_link_3" pos="0.0514 2.20461e-08 9.96327e-09">
+                                <joint name="thumb_joint_3" pos="0 0 0" axis="0 0 1" range="-0.00487373 0.0307655"/>
+                                <geom type="mesh" contype="0" conaffinity="0" material="handmat" mesh="thumb_link_3"/>
+                                <body name="thumb_biotac_tip" pos="0.07 0.01 1.8685e-08" quat="0.976297 4.35705e-08 2.70981e-08 0.216433"/>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="table" pos="0.55 0 0.2">
+      <geom size="0.28 0.4 0.2" type="box" rgba="0.55 0.42 0.3 1"/>
+    </body>
+    <body name="cube" pos="0.55 0 0.4145">
+      <joint type="free"/>
+      <geom size="0.0145 0.0145 0.0145" type="box" condim="4" friction="1 0.05 0.001" mass="0.05" rgba="0.85 0.2 0.2 1"/>
+    </body>
+  </worldbody>
+</mujoco>
